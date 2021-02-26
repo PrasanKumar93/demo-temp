@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+  background-color: #e0f2f1;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+input[type="number"] {
+  min-height: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pg-container {
+  min-width: 60%;
+  background-color: #80cbc4;
+}
+
+.pg-header {
+  background-color: #00897b;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.pg-btn {
+  min-width: 50px;
+  padding: 5px;
+  background-color: #004d40;
+  color: white;
+}
+
+.pg-stop-btn {
+  background-color: #c62828;
+  color: white;
+  margin-left: 20px;
+}
+.pg-reset-btn {
+  background-color: #fdd835;
+  color: black;
+}
+
+.pg-content {
+  display: flex;
+}
+
+.pg-content-child {
+  min-width: 33%;
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+}
+
+.pg-clr-success {
+  color: #004d40;
+}
+
+.pg-clr-fail {
+  color: #c62828;
+}
+
+.pg-content-txt-elm {
+  padding: 5px;
+}
+
+.pg-footer {
+  display: flex;
+}
+.pg-footer-child {
+  min-width: 33%;
+
+  padding: 10px;
+  font-size: 18px !important;
+}

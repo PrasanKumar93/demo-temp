@@ -1,0 +1,59 @@
+<template>
+  <require from="./app.css"></require>
+
+  <div class="pg-container">
+
+    <div class="pg-header">
+
+      <div>
+        <input type="number" placeholder="Enter time" value.bind="txtTime">
+        <span>(${intervalUnit})</span>
+      </div>
+
+      <div>
+        <input type="button" value="Start Firing" class="pg-btn pg-start-btn" click.delegate="btnGenericClick(1)">
+        <input type="button" value="Stop Firing" class="pg-btn pg-stop-btn" click.delegate="btnGenericClick(0)">
+      </div>
+
+      <div>
+        <input type="button" value="Reload" class="pg-btn pg-reset-btn" click.delegate="btnGenericClick(2)">
+      </div>
+
+    </div>
+
+    <div class="pg-content">
+
+      <div class="pg-content-child">
+        <div repeat.for="elm of allArr" class="pg-content-txt-elm">
+          ${elm.startTime} - ${elm.endTime}
+        </div>
+      </div>
+
+      <div class="pg-clr-success pg-content-child">
+        <div repeat.for="elm of successArr" class="pg-content-txt-elm">
+          ${elm.startTime} - ${elm.endTime}
+        </div>
+      </div>
+
+      <div class="pg-clr-fail pg-content-child">
+        <div repeat.for="elm of failedArr">
+          ${elm.startTime} - ${elm.endTime}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pg-footer">
+      <div class="pg-footer-child ">
+        ${allHeader} <br />
+      </div>
+      <div class="pg-clr-sucess pg-footer-child ">
+        ${successHeader} <br />
+      </div>
+      <div class="pg-clr-fail pg-footer-child">
+        ${failHeader} <br />
+      </div>
+    </div>
+
+  </div>
+</template>
